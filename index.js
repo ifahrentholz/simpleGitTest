@@ -13,9 +13,9 @@ simpleGit.mergeFromTo("aboutPage", "master", null, () => {
       simpleGit.commit("added about page", null, null, () => {
         simpleGit.push("origin", "master", () => {
           console.log("DONE");
-          simpleGit.raw("branch -D aboutPage", () => {
+          simpleGit.raw("git branch -D aboutPage", () => {
             console.log("removed local branch aboutPage");
-            simpleGit.raw("push origin --delete aboutPage", () => {
+            simpleGit.raw("git push origin --delete aboutPage", () => {
               console.log("removed remote branch aboutPage");
             });
           });
